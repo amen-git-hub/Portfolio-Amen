@@ -51,7 +51,10 @@
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* compense la navbar fixe */
+}
 
 body {
     font-family: 'Inter', -apple-system, sans-serif;
@@ -1273,10 +1276,23 @@ ul { list-style: none; }
    RESPONSIVE — 900px (tablettes portrait)
    ================================================ */
 @media (max-width: 900px) {
-    /* Nav */
+    /* Nav — 3 colonnes égales : logo | burger | cv-btn */
+    .nav-container {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 0;
+        padding: 14px 20px;
+    }
+    .nav-logo   { grid-column: 1; justify-self: start; }
+    .nav-toggle { grid-column: 2; display: flex; margin-left: 0; }
     .nav-links  { display: none; }
-    .nav-toggle { display: flex; }
-    .cv-btn     { padding: 8px 16px; font-size: 0.82rem; }
+    .cv-btn     {
+        grid-column: 3;
+        justify-self: end;
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
     .nav-links.open {
         display: flex;
         flex-direction: column;
@@ -1350,8 +1366,9 @@ ul { list-style: none; }
 @media (max-width: 440px) {
     .skills-grid     { grid-template-columns: 1fr; }
     .cert-photo-grid { grid-template-columns: 1fr; }
-    .nav-container   { padding: 14px 16px; gap: 12px; }
-    .nav-logo        { font-size: 1rem; }
+    .nav-container   { padding: 12px 14px; }
+    .nav-logo        { font-size: 0.95rem; }
+    .cv-btn          { font-size: 0.75rem; padding: 7px 10px; }
     .hero-stats      { flex-wrap: wrap; justify-content: center; gap: 12px; }
     .stat-divider    { display: none; }
     .project-info    { padding: 16px; }
