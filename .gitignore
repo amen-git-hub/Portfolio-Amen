@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Design drafts (kept local only)
+Design/

@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio von Amen Sossoukpe, Junior-Entwickler für digitale Lösungen – spezialisiert auf moderne, responsive Web-Interfaces, Cloud und KI."
+    />
+    <meta name="author" content="Amen Sossoukpe" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data:; object-src 'none'; base-uri 'self';" />
+    <meta
+      property="og:title"
+      content="Amen Sossoukpe – Junior-Entwickler für digitale Lösungen"
+    />
+    <meta
+      property="og:description"
+      content="Portfolio eines Junior-Webentwicklers – spezialisiert auf HTML, CSS, JavaScript, Tailwind und Cloud."
+    />
+    <meta property="og:type" content="website" />
+    <title>Amen Sossoukpe - Junior-Entwickler für digitale Lösungen</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Canvas particules flottantes -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Orbes de fond -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+    <div class="bg-orb orb-4"></div>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">Amen Sossoukpe</div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#accueil" class="nav-link active">Startseite</a></li>
+          <li><a href="#apropos" class="nav-link">Über mich</a></li>
+          <li><a href="#projets" class="nav-link">Projekte</a></li>
+          <li><a href="#competences" class="nav-link">Fähigkeiten</a></li>
+          <li><a href="#certifications" class="nav-link">Zertifikate</a></li>
+          <li><a href="#contact" class="nav-link">Kontakt</a></li>
+        </ul>
+        <a href="CV/Lebenslauf.pdf" target="_blank" rel="noopener noreferrer" class="cv-btn" id="cvBtn">
+          <i class="fas fa-download"></i> Lebenslauf
+        </a>
+      </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="accueil" class="hero">
+      <div class="hero-container">
+        <div class="hero-content" data-aos="fade-right">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Verfügbar für Projekte
+          </div>
+          <h1 class="hero-title">Amen Sossoukpe</h1>
+          <h2 class="hero-subtitle">Junior-Entwickler für digitale Lösungen</h2>
+          <p class="hero-bio">
+            Ich entwickle moderne Web-Interfaces durch die Kombination von
+            HTML/CSS, Cloud-Technologien und künstlicher Intelligenz
+            pragmatisch, strukturiert und lösungsorientiert.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projets" class="btn btn-primary">
+              <i class="fas fa-rocket"></i> Meine Projekte
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-paper-plane"></i> Kontakt aufnehmen
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Projekte</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">4+</span>
+              <span class="stat-label">Zertifikate</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">12+</span>
+              <span class="stat-label">Fähigkeiten</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-left">
+          <div class="photo-wrapper">
+            <div class="photo-ring-outer"></div>
+            <div class="photo-ring-inner"></div>
+            <div class="photo-glow"></div>
+            <div class="photo-circle">
+              <img
+                src="Image/Photo de profil.jpeg"
+                alt="Amen Sossoukpe - Développeur Web Junior"
+                class="profile-photo"
+                id="profilePhoto"
+                fetchpriority="high"
+              />
+              <div class="photo-fallback" id="photoFallback">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <!-- Bulles décoratives autour de la photo -->
+            <div class="float-badge badge-html">HTML</div>
+            <div class="float-badge badge-css">CSS</div>
+            <div class="float-badge badge-js">JS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scrollen</span>
+      </div>
+    </section>
+
+    <!-- ===================== À PROPOS ===================== -->
+    <section id="apropos" class="section about">
+      <div class="section-container">
+        <div class="about-content glass-card" data-aos="fade-up">
+          <div class="about-icon">
+            <i class="fas fa-user-astronaut"></i>
+          </div>
+          <h2>Über mich</h2>
+          <p>
+            Als Autodidakt bilde ich mich durch die Kombination von HTML/CSS,
+            Cloud-Technologien und künstlicher Intelligenz weiter, um konkrete
+            digitale Lösungen zu entwickeln. Mein Ziel ist es, mich auf
+            Systemintegration zu spezialisieren insbesondere auf
+            Cloud-Sicherheit.
+          </p>
+          <p>
+            Ich bin offen für Stellenangebote, Ausbildungen oder Praktika im
+            Bereich Systemintegration und Cloud-Sicherheit sowohl in Unternehmen
+            als auch als Freelancer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJETS ===================== -->
+    <section id="projets" class="section projects">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Meine Projekte</h2>
+          <p class="section-subtitle">Entdecke meine neuesten Realisierungen</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Carte Projet 1 — GoatDeutschLearn -->
+          <div
+            class="project-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="project-screenshot">
+              <img
+                src="Image/GoatDeutschLearn.png"
+                alt="GoatDeutschLearn - Quiz Allemand Français"
+                class="project-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Web App</span>
+                <span class="tag">Quiz</span>
+                <span class="tag">Sprachen</span>
+              </div>
+              <h3 class="project-title">GoatDeutschLearn</h3>
+              <p class="project-desc">
+                Web-Quiz-App Deutsch-Französisch zur Sprachverbesserung von A1 bis C2,
+                mit Lernfortschritt und über 3800 Vokabeln.
+              </p>
+              <div class="project-buttons">
+                <a
+                  href="https://goatdeutsch.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-small btn-filled btn-full"
+                >
+                  <i class="fas fa-external-link-alt"></i> Projekt ansehen
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte Projet 2 -->
+          <div
+            class="project-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-preview preview-ecommerce">
+              <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-url">e-commerce-site.com</span>
+              </div>
+              <div class="preview-content">
+                <div class="preview-nav"></div>
+                <div class="preview-product-grid">
+                  <div class="ph-product">
+                    <div class="ph-img"></div>
+                    <div class="ph-line sm"></div>
+                    <div class="ph-price"></div>
+                  </div>
+                  <div class="ph-product">
+                    <div class="ph-img"></div>
+                    <div class="ph-line sm"></div>
+                    <div class="ph-price"></div>
+                  </div>
+                  <div class="ph-product">
+                    <div class="ph-img"></div>
+                    <div class="ph-line sm"></div>
+                    <div class="ph-price"></div>
+                  </div>
+                  <div class="ph-product">
+                    <div class="ph-img"></div>
+                    <div class="ph-line sm"></div>
+                    <div class="ph-price"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">Tailwind</span>
+                <span class="tag">JS</span>
+                <span class="tag">API</span>
+              </div>
+              <h3 class="project-title">E-Commerce Site</h3>
+              <p class="project-desc">
+                Vollständige E-Commerce-Plattform mit Warenkorb, Produktverwaltung
+                und intuitiver Benutzeroberfläche.
+              </p>
+              <div class="project-buttons">
+                <a
+                  href="#projets"
+                  class="btn-small btn-filled btn-full btn-disabled"
+                  aria-disabled="true"
+                >
+                  <i class="fas fa-clock"></i> Bald verfügbar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte Projet 3 -->
+          <div
+            class="project-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-preview preview-gestion">
+              <div class="browser-bar">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+                <span class="browser-url">app-gestion.io</span>
+              </div>
+              <div class="preview-content preview-dashboard">
+                <div class="dashboard-sidebar">
+                  <div class="dash-item"></div>
+                  <div class="dash-item active"></div>
+                  <div class="dash-item"></div>
+                  <div class="dash-item"></div>
+                </div>
+                <div class="dashboard-main">
+                  <div class="dash-stats">
+                    <div class="dash-stat"></div>
+                    <div class="dash-stat"></div>
+                    <div class="dash-stat"></div>
+                  </div>
+                  <div class="dash-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Cloud</span>
+              </div>
+              <h3 class="project-title">Management App</h3>
+              <p class="project-desc">
+                Aufgaben- und Projektverwaltungs-App mit analytischem Dashboard
+                und Echtzeit-Teammanagement.
+              </p>
+              <div class="project-buttons">
+                <a
+                  href="#projets"
+                  class="btn-small btn-filled btn-full btn-disabled"
+                  aria-disabled="true"
+                >
+                  <i class="fas fa-clock"></i> Bald verfügbar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMPÉTENCES ===================== -->
+    <section id="competences" class="section skills">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Expertise</span>
+          <h2 class="section-title">Meine Fähigkeiten</h2>
+          <p class="section-subtitle">Technologien, die ich beherrsche</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- HTML5 -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap html-color">
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-pct html-color">95%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill html-fill" data-pct="95"></div>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="60"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap css-color">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-pct css-color">90%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill css-fill" data-pct="90"></div>
+            </div>
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="120"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap tailwind-color">
+                <svg
+                  viewBox="0 0 54 33"
+                  fill="currentColor"
+                  width="28"
+                  height="18"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M27 0C19.8 0 15.3 3.6 13.5 10.8c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.514-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.514-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+                  />
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">Tailwind CSS</span>
+                <span class="skill-pct tailwind-color">80%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill tailwind-fill" data-pct="80"></div>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="180"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap js-color">
+                <i class="fab fa-js"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-pct js-color">30%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill js-fill" data-pct="30"></div>
+            </div>
+          </div>
+
+          <!-- Claude Code -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="240"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap claude-color">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="26"
+                  height="26"
+                >
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 3a7 7 0 110 14A7 7 0 0112 5zm-1 3v4l3.5 2-.5.87L10 13V8h1z"
+                  />
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">Claude Code</span>
+                <span class="skill-pct claude-color">90%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill claude-fill" data-pct="90"></div>
+            </div>
+          </div>
+
+          <!-- Prompt Ingénierie -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap prompt-color">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">Prompt Engineering</span>
+                <span class="skill-pct prompt-color">80%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill prompt-fill" data-pct="80"></div>
+            </div>
+          </div>
+
+          <!-- Cloud Computing -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="360"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap cloud-color">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">Cloud Computing</span>
+                <span class="skill-pct cloud-color">65%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill cloud-fill" data-pct="65"></div>
+            </div>
+          </div>
+
+          <!-- Supabase -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="420"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap supabase-color">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="26"
+                  height="26"
+                >
+                  <path
+                    d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C.Billboard.816 12.797.99 13.763.99h7.577c.97 0 1.52-1.133.902-1.875L11.9 1.036zM12.1 22.964c.015.986 1.26 1.41 1.874.637l9.262-11.651c.428-.539-.116-1.319-1.082-1.319h-7.577c-.97 0-1.52 1.133-.902 1.875L12.1 22.964z"
+                  />
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">Supabase</span>
+                <span class="skill-pct supabase-color">50%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill supabase-fill" data-pct="50"></div>
+            </div>
+          </div>
+
+          <!-- Firebase -->
+          <div
+            class="skill-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="480"
+          >
+            <div class="skill-header">
+              <div class="skill-icon-wrap firebase-color">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+                  <path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z"/>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">Firebase</span>
+                <span class="skill-pct firebase-color">40%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill firebase-fill" data-pct="40"></div>
+            </div>
+          </div>
+
+          <!-- WordPress -->
+          <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="540">
+            <div class="skill-header">
+              <div class="skill-icon-wrap wordpress-color">
+                <i class="fab fa-wordpress"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">WordPress</span>
+                <span class="skill-pct wordpress-color">70%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill wordpress-fill" data-pct="70"></div>
+            </div>
+          </div>
+
+          <!-- Photoshop -->
+          <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="skill-header">
+              <div class="skill-icon-wrap photoshop-color">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+                  <path d="M0 0h24v24H0V0zm8.5 7.5H6v9h1.5v-3H8.5c1.9 0 3-1.1 3-3s-1.1-3-3-3zm0 4.5H7.5V9H8.5c1 0 1.5.5 1.5 1.5S9.5 12 8.5 12zm7-4.5h-2.5v9H15c2.2 0 3.5-1.6 3.5-4.5S17.2 7.5 15.5 7.5zm0 7.5h-1V9h1c1.4 0 2 1.1 2 3s-.6 3-2 3z"/>
+                </svg>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">Photoshop</span>
+                <span class="skill-pct photoshop-color">65%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill photoshop-fill" data-pct="65"></div>
+            </div>
+          </div>
+
+          <!-- Figma -->
+          <div class="skill-card glass-card" data-aos="fade-up" data-aos-delay="660">
+            <div class="skill-header">
+              <div class="skill-icon-wrap figma-color">
+                <i class="fab fa-figma"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-name">Figma</span>
+                <span class="skill-pct figma-color">60%</span>
+              </div>
+            </div>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill figma-fill" data-pct="60"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section id="certifications" class="section certifications">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">Abschlüsse</span>
+          <h2 class="section-title">Meine Zertifikate</h2>
+          <p class="section-subtitle">
+            Offizielle Nachweise meiner Fähigkeiten
+          </p>
+        </div>
+
+        <!-- Grille photo-cartes certifications -->
+        <div class="cert-photo-grid">
+          <!-- 1. Claude Code in Action — Anthropic -->
+          <div
+            class="cert-photo-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="0"
+          >
+            <div class="cert-photo-area">
+              <img
+                src="Image/Claude Code.png"
+                alt="Claude Code in Action - Anthropic"
+                class="cert-photo"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-photo-footer">
+              <div class="cert-photo-info">
+                <h3>Claude Code in Action</h3>
+                <p class="cert-issuer">Anthropic</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Google Analytics -->
+          <div
+            class="cert-photo-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="cert-photo-area">
+              <img
+                src="Image/Google Analytics.png"
+                alt="Certification Google Analytics"
+                class="cert-photo"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-photo-footer">
+              <div class="cert-photo-info">
+                <h3>Certification Google Analytics</h3>
+                <p class="cert-issuer">Google</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Google Ads Search -->
+          <div
+            class="cert-photo-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="cert-photo-area">
+              <img
+                src="Image/Google Ads Search.png"
+                alt="Certification Google Ads Search"
+                class="cert-photo"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-photo-footer">
+              <div class="cert-photo-info">
+                <h3>Google Ads Search</h3>
+                <p class="cert-issuer">Google</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Responsive Web Design — freeCodeCamp -->
+          <div
+            class="cert-photo-card glass-card"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="cert-photo-area">
+              <img
+                src="Image/Response web Design.png"
+                alt="Responsive Web Design - freeCodeCamp"
+                class="cert-photo"
+                loading="lazy"
+              />
+            </div>
+            <div class="cert-photo-footer">
+              <div class="cert-photo-info">
+                <h3>Responsive Web Design</h3>
+                <p class="cert-issuer">freeCodeCamp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact-panel glass-card" data-aos="fade-up" id="contact">
+          <h3 class="contact-title">Kontakt</h3>
+          <p class="contact-intro">
+            Haben Sie ein Projekt? Lassen Sie uns zusammenarbeiten!
+          </p>
+
+          <div class="contact-items">
+            <a href="mailto:amensossoukpe@gmail.com" class="contact-item">
+              <div class="contact-icon-wrap">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">amensossoukpe@gmail.com</span>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/amen-git-hub"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-item"
+            >
+              <div class="contact-icon-wrap">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">github.com/amen-git-hub</span>
+              </div>
+            </a>
+          </div>
+
+          <a
+            href="mailto:amensossoukpe@gmail.com"
+            class="btn btn-primary contact-cta"
+          >
+            <i class="fas fa-paper-plane"></i> Nachricht senden
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">Amen Sossoukpe</div>
+        <p class="footer-copy">
+          Amen Sossoukpe &copy; 2024 - Alle Rechte vorbehalten
+        </p>
+        <div class="footer-socials">
+          <a
+            href="https://github.com/amen-git-hub"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
