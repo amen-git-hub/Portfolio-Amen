@@ -954,6 +954,14 @@ ul { list-style: none; }
 .photoshop-fill  { background: linear-gradient(90deg, var(--photoshop-clr), #a8d8ff); box-shadow: 0 0 8px rgba(49,168,255,0.5); }
 .figma-fill      { background: linear-gradient(90deg, var(--figma-clr), #ff8c69); box-shadow: 0 0 8px rgba(242,78,30,0.5); }
 
+/* Skills Marquee Wrapper */
+.skills-marquee-wrapper { overflow: hidden; position: relative; }
+
+@keyframes skillsMarquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 /* ================================================
    CERTIFICATIONS SECTION
    ================================================ */
@@ -1346,8 +1354,25 @@ ul { list-style: none; }
 
     /* Grilles */
     .projects-grid   { grid-template-columns: 1fr; }
-    .skills-grid     { grid-template-columns: 1fr 1fr; }
     .cert-photo-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Skills — défilement horizontal infini */
+    .skills-marquee-wrapper {
+        -webkit-mask: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+        mask: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+    }
+    .skills-grid {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        grid-template-columns: unset;
+        width: max-content;
+        gap: 14px;
+        animation: skillsMarquee 30s linear infinite;
+    }
+    .skills-grid .skill-card {
+        width: 185px;
+        flex-shrink: 0;
+    }
 
     /* About */
     .about-content { padding: 28px 20px; }
@@ -1364,7 +1389,6 @@ ul { list-style: none; }
    RESPONSIVE — 440px (petits téléphones)
    ================================================ */
 @media (max-width: 440px) {
-    .skills-grid     { grid-template-columns: 1fr; }
     .cert-photo-grid { grid-template-columns: 1fr; }
     .nav-container   { padding: 12px 14px; }
     .nav-logo        { font-size: 0.95rem; }

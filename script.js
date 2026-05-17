@@ -362,7 +362,42 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 })();
 
-/* ─── 10. COMPTEURS ANIMÉS ───────────────────────── */
+/* ─── 10. SKILLS MARQUEE (mobile) ───────────────── */
+(function initSkillsMarquee() {
+  const mq = window.matchMedia('(max-width: 620px)');
+  const grid = document.querySelector('.skills-grid');
+  if (!grid) return;
+
+  function setup(isMobile) {
+    grid.querySelectorAll('.skill-card-clone').forEach(el => el.remove());
+    if (!isMobile) return;
+
+    const originals = Array.from(grid.querySelectorAll('.skill-card:not(.skill-card-clone)'));
+
+    originals.forEach(card => {
+      card.classList.add('aos-animate');
+      card.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        bar.style.width = (bar.dataset.pct || '0') + '%';
+      });
+    });
+
+    originals.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.classList.add('skill-card-clone', 'aos-animate');
+      clone.removeAttribute('data-aos');
+      clone.removeAttribute('data-aos-delay');
+      clone.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        bar.style.width = (bar.dataset.pct || '0') + '%';
+      });
+      grid.appendChild(clone);
+    });
+  }
+
+  setup(mq.matches);
+  mq.addEventListener('change', e => setup(e.matches));
+})();
+
+/* ─── 11. COMPTEURS ANIMÉS ───────────────────────── */
 (function initCounters() {
   const stats = document.querySelectorAll(".stat-num");
   if (!stats.length) return;
