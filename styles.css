@@ -1330,7 +1330,7 @@ ul { list-style: none; }
     .float-badge    { display: none; } /* badges trop encombrés sur mobile */
 
     /* Projects / Skills / Certs */
-    .projects-grid   { grid-template-columns: 1fr 1fr; }
+    .projects-grid   { grid-template-columns: 1fr; }
     .skills-grid     { grid-template-columns: repeat(2, 1fr); }
     .cert-photo-grid { grid-template-columns: repeat(2, 1fr); }
 
